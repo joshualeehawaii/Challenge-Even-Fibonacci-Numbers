@@ -5,11 +5,20 @@
  * @param  {Number} maxFibValue
  * @return {Number} sum
  */
+
 function _sumFibs( maxFibValue ) {
   var sum = 0;
-
-  // do your work here
-
+  var temp;
+  num1 = 0;
+  num2 = 1;
+  while(num2 < maxFibValue){
+    temp = num1; //flipping temp to = num1
+    num1 = num2; //flipping num1 to = num2
+    num2 += temp; //setting num2 to = num2 + temp
+    if(num2 % 2 === 0){ //if num2 is even, set sum to = num2
+      sum += num2;
+    }
+  }
   return sum;
 }
 
@@ -23,7 +32,7 @@ function _highestFibonacciNumber (maxFibValue){
   //do your work here
 
   return highest;
-};
+}
 
 /**
  * Do not modify code below.
